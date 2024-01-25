@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 
-
 def layout_main():
     sg.theme('DarkAmber')
     layout = [[sg.Text("Quantidade de caracteres:")],

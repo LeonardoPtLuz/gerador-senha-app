@@ -11,12 +11,14 @@ def main():
 
         if event == sg.WINDOW_CLOSED or event == 'Sair':
             break
+
+        senha = ''
         
         if event == "Gerar":
             try:
                 quantidade_caracteres = int(values['-INPUT-'])
 
-                if quantidade_caracteres <= 0:
+                if quantidade_caracteres <= 0 or values['-LETRAS-'] == False and values['-NUMEROS-'] == False and values['-SIMBOLOS-'] == False:
                     window['-OUTPUT-'].update('Apenas números inteiros maiores que zero!')
                     continue
 
